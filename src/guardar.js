@@ -5,9 +5,14 @@ function guardar(){
         alert("No es posible publicar un post sin titulo");
     }
     else{
-        const post = new Post (document.getElementById("titulo-post"), document.getElementById("contenido-detallado")); 
-        post.mostrarPost();
+        if (document.getElementById("titulo-post").value.length <= 50){
+            const post = new Post (document.getElementById("titulo-post"), document.getElementById("contenido-detallado")); 
+            post.mostrarPost();
+        }
+        else
+        {
+            alert("No es posible publicar un post con titulo de mas de 50 caracteres");
+        }
     }
-    
 }
 export default guardar;
