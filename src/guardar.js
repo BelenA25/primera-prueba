@@ -6,8 +6,13 @@ function guardar(){
     }
     else{
         if (document.getElementById("titulo-post").value.length <= 50){
-            const post = new Post (document.getElementById("titulo-post"), document.getElementById("contenido-detallado")); 
-            post.mostrarPost();
+            if(document.getElementById("contenido-detallado").value.length <= 150){
+                const post = new Post (document.getElementById("titulo-post"), document.getElementById("contenido-detallado")); 
+                post.mostrarPost();
+            }
+            else{
+                alert("No es posible publicar un post con detalle de mas de 150 caracteres");
+            }
         }
         else
         {
