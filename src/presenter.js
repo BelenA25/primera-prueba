@@ -1,4 +1,4 @@
-import { Post } from './post'
+import guardar from './guardar.js'
 
 const formPost = document.querySelector("#publicar-post");
 const div = document.querySelector("#resultado-div");
@@ -6,6 +6,5 @@ const div = document.querySelector("#resultado-div");
 formPost.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const post = new Post (document.getElementById("titulo-post"), document.getElementById("contenido-detallado")); 
-  post.mostrarPost();
+  guardar();
 });
