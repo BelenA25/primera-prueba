@@ -1,15 +1,11 @@
-import sumar from "./sumador";
+import { Post } from './post'
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const formPost = document.querySelector("#publicar-post");
 const div = document.querySelector("#resultado-div");
 
-form.addEventListener("submit", (event) => {
+formPost.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  const post = new Post (document.getElementById("titulo-post"), document.getElementById("contenido-detallado")); 
+  post.mostrarPost();
 });

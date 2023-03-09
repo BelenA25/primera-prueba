@@ -1,14 +1,16 @@
 <html>
   <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+    <h1>POST</h1>
+    <form id="publicar-post">
+      <label >Titulo de post:</label>
+      <input type="text" id="titulo-post" />
+      <label for="segundo-numero">Contenido detallado del post:</label>
+      <input type="text" id="contenido-detallado" />
+      <input type="submit" value="Publicar" id="publicar-button" />
     </form>
+    <h1>POSTS</h1>
     <div id="resultado-div"></div>
+    <div id="resultado2-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
